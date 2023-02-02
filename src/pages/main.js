@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
+import SpecialContainer from '../container/SpecialContainer';
 import Promotion from './Promotion';
-import Specialoffer from './Specialoffer';
 import VisualSlider from './VisualSlider';
 
 const Main = () => {
@@ -30,7 +30,7 @@ const Main = () => {
     return (
         <div>
             <VisualSlider/>
-            <Specialoffer data={special}/>
+            <SpecialContainer/>
             <Promotion/>
         </div>
     );
