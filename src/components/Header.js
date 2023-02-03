@@ -1,13 +1,14 @@
 import React from 'react';
 import { MdFace } from "react-icons/md";
+import { Link } from 'react-router-dom';
 import './Header.css'
 
 const Header = () => {
     return (
         <header>
-            <h1>MIDAS</h1>
+            <h1><Link to="/"><img src="/imgages/logo2.png" alt=""/> MIDAS</Link></h1>
             <ul className='menu'>
-                <li>스페셜 오퍼</li>
+                <li><Link to="/special">스페셜 오퍼</Link></li>
                 <li>홈</li>
                 <li>객실안내</li>
                 <li>객실예약</li>
@@ -17,8 +18,8 @@ const Header = () => {
                 <div className='iconDiv'>
                     <MdFace/>
                     <ul className='membermenu'>
-                        <li>로그인</li>
-                        <li>회원가입</li>
+                        <li><Link to="/login">로그인</Link></li>
+                        <li><Link to="/join">회원가입</Link></li>
                     </ul>
                 </div>
             </div>

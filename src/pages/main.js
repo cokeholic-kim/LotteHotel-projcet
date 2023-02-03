@@ -30,7 +30,7 @@ const Main = () => {
     return (
         <div>
             <VisualSlider/>
-            <SpecialContainer/>
+            <SpecialContainer isMain={true}/>
             <Promotion/>
         </div>
     );

@@ -1,0 +1,4 @@
+npm install react-daum-postcode
+
+암호화   (서버측에 설치)
+npm install bcrypt
