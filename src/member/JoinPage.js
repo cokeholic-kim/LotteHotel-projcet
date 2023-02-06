@@ -70,7 +70,7 @@ const JoinPage=()=>{
                 <div>
                     <form onSubmit={onSubmit}>
 
-                        <table>
+                        <table className="defaulttable">
                             <tbody>
                                 <tr>
                                     <td>이름</td>
