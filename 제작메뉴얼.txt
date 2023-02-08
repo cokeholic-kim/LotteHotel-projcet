@@ -1,0 +1,26 @@
+input type="file" 변경 onChange 될때 폼생성
+ --> 폼에 파일데이터 추가 upload경로로 post 전송
+-->전송 응답을 받아서 setFormData --> e_img: "응답결과"
+
+폼생성
+const imgaeFormData = new FormData()
+폼에 파일추가
+imageFormData.append('img' , e.target.files[0] )
+전송
+axios.post('upload',imageFormData,{
+	headers:{'content-type':'multipart/formdata'} //form에 enc-type으로 들어가는걸 헤더에 설정
+
+})
+.then()
+.catch()
+-->전송 응답을 받아서 setFormData --> e_img: "응답결과"
+
+
+
+서버 쿼리문 insert
+
+conn.query("쿼리문",콜백함수)
+conn.query("쿼리문",[변수...],콜백함수)
+
+conn.query("insert into event(e_title, ...etc) values('${}','${}','${}' ..etc)",콜백함수)
+conn.query("insert into event(e_title, ...etc) values(?,?,?,?,?)",[ 값,값 ,값],콜백함수)
