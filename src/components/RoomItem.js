@@ -3,6 +3,7 @@ import { API_URL } from '../config/apiurl';
 import './Roomitem.css';
 
 const RoomItem = ({item}) => {
+    const price = Number(item.r_price).toLocaleString('ko_KR');
     return (
         <li className='rooitem'>
             <div>
