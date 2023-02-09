@@ -11,6 +11,8 @@ import IdFind from './member/IdFind';
 import PassFind from './member/PassFind';
 import EditPassword from './member/EditPassword';
 import WriteEvent from './pages/WriteEvent';
+import WriteRoom from './pages/WriteRoom';
+import RoomContainer from './container/RoomContainer';
 
 function App() {  
 
@@ -19,7 +21,7 @@ function App() {
       <Header/>
         <Routes>
           <Route path='/' element={<Main/>}/>
-          <Route path="/special" element={<SpecialContainer isMain={false}/>}/>
+          <Route path="/special" element={<SpecialContainer isMain={false} limits={10}/>}/>
           <Route path='/special/:no' element={<SpDetailContainer/>}/>
           <Route path="/join" element={<JoinPage/>}/>
           <Route path="/login" element={<Login/>}/>
@@ -27,6 +29,8 @@ function App() {
           <Route path="/findpass" element = {<PassFind/>}/>
           <Route path="/updatePassword" element={<EditPassword/>}/>
           <Route path="/writeevent" element={<WriteEvent/>}/>
+          <Route path="/writeroom" element={<WriteRoom/>}/>
+          <Route path="/room" element={<RoomContainer/>}/>
         </Routes>    
       <Footer/>
     </div>

@@ -9,7 +9,7 @@ const SpecialLists = ({list})=>{
         <li>
             <Link to={`special/${list.e_no}`}>
                 <div className='imgdiv'>
-                    <img src={`${API_URL}/${list.e_img1}`} alt="" />
+                    <img src={`${API_URL}/upload/event/${list.e_img1}`} alt="" />
                 </div>
                 <div className='textdiv'>
                     
@@ -29,7 +29,7 @@ const SpecialLists = ({list})=>{
 const SpecialOfferPage = ({data}) => {
     console.log(data)
     return (
-        <div className='specialPage'>
+        <div className='specialpage'>
             <div className='inner'>
                 <Title title="Special" />
                 <ul>

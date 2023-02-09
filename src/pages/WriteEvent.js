@@ -73,10 +73,10 @@ const WriteEvent = () => {
     },[])
     if(isLogin || username !== 'admin') return null;
     return (
-        <div>
+        <div className='inner'>
             <Title title="Event"/>
             <form onSubmit={onSubmit}>
-                <table>
+                <table className='defaulttable'>
                     <tbody>
                         <tr>
                             <td>제목</td>
