@@ -7,7 +7,7 @@ const RoomPage = ({data}) => {
         <div className='inner'>
             <Title title="Room"/>
             <ul>
-                {data.map(d=><RoomItem item={d}/>)}
+                {data.map((d,index)=><RoomItem key={index} item={d}/>)}
             </ul>
         </div>
     );

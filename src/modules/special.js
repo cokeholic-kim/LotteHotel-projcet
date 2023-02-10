@@ -39,10 +39,10 @@ export const getDatas = (callback)=> async dispatch =>{ //getDatas를 하면 함
         dispatch({type:GET_DATAS_ERROR,error:e})
     }
 }
-export const getData = no => async dispatch =>{
+export const getData = callback => async dispatch =>{
     dispatch ({type: GET_DATA});
     try{
-        const response = await axios.get(`${API_URL}/special/${no}`)
+        const response = await callback()//axios.get(`${API_URL}/special/${no}`)
         const data = response.data
         dispatch({type:GET_DATA_SUCCESS,data})
     }

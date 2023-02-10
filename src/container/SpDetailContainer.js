@@ -2,13 +2,21 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData } from '../modules/special';
 import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import { API_URL } from '../config/apiurl';
 
 const SpDetailContainer = () => {
     const {no} = useParams()
     const { data, loading , error } = useSelector(state=>state.special.special);
     const dispatch = useDispatch();
+
+    const getSpecialData = async ()=>{
+        const data = await axios.get(`${API_URL}/special/${no}`);
+        return data
+    }
+
     useEffect(()=>{
-        dispatch(getData(no))
+        dispatch(getData(getSpecialData))
     },[dispatch,no])
 
     if (loading) return <div>로딩중입니다...</div>
