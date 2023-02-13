@@ -1,7 +1,8 @@
 import { combineReducers } from "redux";
 import special from "./special";
 import logincheck from "./logincheck";
+import reserve from "./reserve";
 
 //루트 리듀서
-const rootReducer = combineReducers({special , logincheck})
+const rootReducer = combineReducers({special , logincheck , reserve})
 export default rootReducer;

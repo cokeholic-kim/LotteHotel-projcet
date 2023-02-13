@@ -26,7 +26,7 @@ const Header = () => {
             <ul className='menu'>
                 <li><Link to="/special">스페셜 오퍼</Link></li>
                 <li><Link to="/room">객실안내</Link></li>
-                <li>객실예약</li>
+                <li><Link to="/reservation">객실예약</Link></li>
                 <li>이용안내</li>
                 {isLogin && username == 'admin' ? 
                 <>
