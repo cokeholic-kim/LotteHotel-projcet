@@ -36,8 +36,7 @@ function App() {
           <Route path="/room" element={<RoomContainer/>}/>
           <Route path="/roomdetail/:no" element={<RoomDetailContainer/>}/>
           <Route path="/test" element={<Example/>}/>
-          <Route path="/reservation" element={<Reservation/>}/>
-
+          <Route path="/reservation/*" element={<Reservation/>}/>
         </Routes>    
       <Footer/>
     </div>
