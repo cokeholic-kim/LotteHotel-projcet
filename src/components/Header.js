@@ -16,10 +16,16 @@ const Header = () => {
         dispatch(setlogout()); 
     }
     useEffect(()=>{
-        if(username){
-            dispatch(setLogin()); //헤더에서 다시 디스패치 해주면 새로고침해도 로그아웃안됨
-        }
-    },[])
+        const loop = setInterval(()=>{
+            const username = getCookie("username")
+            if(username){
+                dispatch(setLogin()); //헤더에서 다시 디스패치 해주면 새로고침해도 로그아웃안됨
+            }else{
+                dispatch(setlogout())
+                clearInterval(loop)
+            }
+        },3000)
+    },[username,dispatch])
     return (
         <header>
             <h1><Link to="/"><img src="/imgages/logo2.png" alt=""/> MIDAS</Link></h1>
