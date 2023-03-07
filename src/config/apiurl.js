@@ -1,1 +1,1 @@
-export const API_URL = "https://github.com/cokeholic-kim/LotteHotel-projcet.git"
+export const API_URL = "https://hotel-server-g.herokuapp.com/"
